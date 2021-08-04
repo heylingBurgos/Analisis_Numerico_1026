@@ -1,0 +1,27 @@
+#include <iostream>
+#include <math.h>
+#include <iomanip>
+#include <vector>
+using namespace std;
+
+int main() {
+  long double n, x, error, y ; 
+
+  cout << "Ingrese el número a calcular su raíz cuadrada: ";
+  cin >> n;
+  cout << "Ingrese la tolerancia (ejemplo: escriba 1e-n): ";
+  cin >> error;
+  x = n;
+
+  y = (x+(n/x))/2;
+  cout<< endl;
+  while(abs(x - y) > error){
+    x = y;
+    y = (x+(n/x))/2;
+    cout<< setprecision(8);
+    cout<<  " -> y es igual a "<<fixed<< y << " con un error de "<< error <<endl;
+  }
+
+  cout<< endl << "El valor real de la raíz cuadrada de "<< n << " es "<< sqrt(n) << endl;
+
+}
