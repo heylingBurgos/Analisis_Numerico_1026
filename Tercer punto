@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	float x = 4, conta =0, r = 0;
+	float arraycof[4] = {1,-2,1.333,-0.296};
+
+	for(int i = 0; i < 4; i++){  
+    if(i!=0){
+      r = r * x + arraycof[i];
+      conta ++;
+    }else{
+      r = arraycof[i];
+    } 
+	}
+
+  cout<<endl<< "Resultado del polinomio: "<< r<<endl<<endl;
+  cout<< "----- Cantidad de operaciones realizadas----"<<endl;
+  cout<< "-> Cantidad de sumas: "<< conta<<endl;
+  cout<< "-> Cantidad de multiplicaciones: "<< conta<<endl;
+}
