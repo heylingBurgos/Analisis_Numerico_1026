@@ -8,7 +8,7 @@ warnings.simplefilter("ignore")
 #Metodo Runge Kutta
 def rungeKutta(v, lorenz):
     
-    h= 0.05
+    h= 0.5
     lista_t = np.arange(1,50,0.002)   
     X,Y,Z=[],[],[]
     
@@ -17,7 +17,7 @@ def rungeKutta(v, lorenz):
         fx, fy, fz = lorenz(x,y,z)
         return np.array([fx,fy,fz],float)
       
-    for t in 100:   
+    for t in  range(100):   
         k1=h*fun(v)
         k2=h*fun(v+(0.5*k1))
         k3=h*fun(v+(0.5*k2))
